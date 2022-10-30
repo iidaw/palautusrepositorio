@@ -40,3 +40,5 @@ class Statistics:
             i += 1
 
         return result
+
+        

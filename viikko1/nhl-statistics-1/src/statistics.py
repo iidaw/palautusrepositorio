@@ -41,4 +41,3 @@ class Statistics:
 
         return result
 
-        

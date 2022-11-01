@@ -4,7 +4,7 @@ from player import Player
 class PlayerReader:
     def __init__(self):
         self._url = "https://studies.cs.helsinki.fi/nhlstats/2021-22/players.txt"
-
+        
     def get_players(self):
         players_file = request.urlopen(self._url)
         players = []

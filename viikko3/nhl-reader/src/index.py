@@ -25,10 +25,10 @@ def main():
 
     print("Oliot:")
 
+    players.sort(reverse=True)
     for player in players:
-        print(f"{player.name} team {player.team} assists {player.assists} goals {player.goals}")
-        #print(player.name, player.team, player.assists, player.goals)
-
+        print(f"{player.name}  {player.team} {player.assists} + {player.goals} = {player.assists + player.goals}")
+        
 
 if __name__ == "__main__":
     main()

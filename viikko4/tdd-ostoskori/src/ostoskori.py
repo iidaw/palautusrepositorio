@@ -24,7 +24,10 @@ class Ostoskori:
 
     def lisaa_tuote(self, lisattava: Tuote):
         # lisää tuotteen
-        pass
+        if not lisattava.nimi in self.tuotteet:
+            self.tuotteet[lisattava.nimi] = Ostos(lisattava)
+        else: 
+            self.tuotteet[lisattava.nimi].muuta_lukumaaraa(1) 
 
     def poista_tuote(self, poistettava: Tuote):
         # poistaa tuotteen

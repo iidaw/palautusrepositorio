@@ -18,7 +18,7 @@ class Kayttoliittyma:
             Komento.SUMMA: sovelluslogiikka.Summa(sovelluslogiikka, self._lue_syote),
             Komento.EROTUS: sovelluslogiikka.Erotus(sovelluslogiikka, self._lue_syote),
             Komento.NOLLAUS: sovelluslogiikka.Nollaus(sovelluslogiikka),
-            #Komento.KUMOA: sovelluslogiikka.Kumoa(sovelluslogiikka, self._lue_syote)
+            Komento.KUMOA: sovelluslogiikka.Kumoa(sovelluslogiikka, self._lue_syote)
         }
 
 

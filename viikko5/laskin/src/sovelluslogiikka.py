@@ -1,6 +1,7 @@
 class Sovelluslogiikka:
     def __init__(self, tulos=0):
         self.tulos = tulos
+        self.edellinen = 0
 
     class Summa:
         def __init__(self, sovellus, syote):
@@ -8,6 +9,7 @@ class Sovelluslogiikka:
             self.syote = syote
 
         def suorita(self):
+            self.sovellus.edellinen = self.sovellus.tulos
             self.sovellus.tulos += int(self.syote())
 
     class Erotus:
@@ -16,6 +18,7 @@ class Sovelluslogiikka:
             self.syote = syote
 
         def suorita(self):
+            self.sovellus.edellinen = self.sovellus.tulos
             self.sovellus.tulos -= int(self.syote())
 
     class Nollaus:
@@ -26,8 +29,9 @@ class Sovelluslogiikka:
             self.sovellus.tulos = 0
 
     class Kumoa:
-        def __init__(self):
-            pass
+        def __init__(self, sovellus, edellinen):
+            self.sovellus = sovellus
+            self.edellinen = edellinen
 
         def suorita(self):
-            pass
+            self.sovellus.tulos = self.sovellus.edellinen
